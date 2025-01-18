@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
-import { div } from 'framer-motion/client';
 
 const HomePage = () => {
   return (
-    <motion.div
+    <div
       className='h-screen text-5xl flex justify-center items-center flex-col text-center font-bold text-white'>
       <motion.div
         initial={{ y: 50, opacity: 0 }}
@@ -18,7 +17,7 @@ const HomePage = () => {
         <p>UNDER</p>
         <p>DEVELOPMENT</p>
       </motion.div>
-    </motion.div>
+    </div>
   )
 }
 
