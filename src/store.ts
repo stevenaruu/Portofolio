@@ -1,7 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useSelector } from 'react-redux';
-import { persistReducer, persistStore } from 'redux-persist';
-import storage from 'redux-persist/es/storage';
+import { persistStore } from 'redux-persist';
 import { SplashScreenSlice } from './store/splash-screen/SplashScreenSlice';
 
 const rootReducer = combineReducers({

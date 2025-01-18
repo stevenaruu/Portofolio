@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import DecryptedText from '../../atoms/decrypted-text/DecryptedText';
 import { SET_SPLASH_SCREEN } from '../../../store/splash-screen/SplashScreenSlice';
