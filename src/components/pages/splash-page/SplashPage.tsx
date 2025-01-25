@@ -1,4 +1,4 @@
-import Container from '../../organisms/container/Container'
+import Container from '../../container/Container'
 import SplashLayout from '../../templates/splash-layout/SplashLayout'
 
 const SplashPage = () => {

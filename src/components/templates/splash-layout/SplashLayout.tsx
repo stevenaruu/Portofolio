@@ -14,7 +14,7 @@ const SplashLayout = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setTextIndex(1);
-    }, 700);
+    }, 800);
 
     return () => clearTimeout(timer);
   }, []);
@@ -26,11 +26,11 @@ const SplashLayout = () => {
   const handleZoomAnimationComplete = () => {
     setTimeout(() => {
       dispatch(SET_SPLASH_SCREEN(false));
-    }, 500);
+    }, 700);
   };
 
   return (
-    <div className='h-screen text-white font-bold tracking-wide text-4xl flex justify-center items-center'>
+    <div className='h-screen font-bold tracking-wide text-4xl flex justify-center items-center'>
       <motion.div
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
