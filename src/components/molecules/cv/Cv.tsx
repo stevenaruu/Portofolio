@@ -5,11 +5,21 @@ import { ShimmerButton } from '../../atoms/shimmer-button/ShimmerButton';
 import { motion } from 'framer-motion';
 
 const Cv = () => {
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = cv
-    link.download = 'STEVEN_CV.pdf';
-    link.click();
+  const handleDownload = async () => {
+    try {
+      const response = await fetch(cv);
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'STEVEN_CV.pdf';
+      link.click();
+
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error downloading CV:', error);
+    }
   };
 
   const [isVisible, setIsVisible] = useState(false);
