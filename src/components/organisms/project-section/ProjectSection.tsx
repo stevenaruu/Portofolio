@@ -1,4 +1,3 @@
-import React from 'react'
 import Title from '../../atoms/title/Title'
 import Container from '../../container/Container'
 
