@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 shadow-md">
+    <div className="fixed top-0 left-0 right-0 z-50">
       <Container>
         <div className="font-bold py-5 flex justify-between items-center w-full">
           {/* Logo */}
@@ -30,7 +30,7 @@ const Navbar = () => {
             exit={{ x: '100%', opacity: 0 }}
             transition={{ type: 'spring', stiffness: 50, damping: 20 }}
           >
-            <Label text="STVN." onClick={() => handleScroll("home")}/>
+            <Label text="STVN." onClick={() => handleScroll("home")} />
           </motion.div>
 
           {/* Desktop Menu */}
@@ -43,9 +43,9 @@ const Navbar = () => {
           >
             <Label text="ABOUT ME" onClick={() => handleScroll("about-me")} />
             <Label text="EDUCATIONS" onClick={() => handleScroll("education")} />
-            <Label text="EXPERIENCES" />
-            <Label text="SKILLS" />
-            <Label text="PROJECTS" />
+            <Label text="EXPERIENCES" onClick={() => handleScroll("experience")} />
+            <Label text="SKILLS" onClick={() => handleScroll("skill")} />
+            <Label text="PROJECTS" onClick={() => handleScroll("project")} />
           </motion.div>
 
           {/* Mobile Menu Button */}
@@ -61,7 +61,7 @@ const Navbar = () => {
         <AnimatePresence>
           {isDropdownOpen && (
             <motion.div
-              className="md:hidden fixed top-0 right-0 h-full w-4/6 font-bold bg-zinc-800 shadow-md p-4 space-y-5 z-50"
+              className="md:hidden fixed top-0 right-0 h-full w-4/6 font-bold bg-zinc-800 p-4 space-y-5 z-50"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
@@ -77,9 +77,9 @@ const Navbar = () => {
               </motion.button>
               <Label text="ABOUT ME" onClick={() => handleScroll("about-me")} />
               <Label text="EDUCATIONS" onClick={() => handleScroll("education")} />
-              <Label text="EXPERIENCES" />
-              <Label text="SKILLS" />
-              <Label text="PROJECTS" />
+              <Label text="EXPERIENCES" onClick={() => handleScroll("experience")} />
+              <Label text="SKILLS" onClick={() => handleScroll("skill")} />
+              <Label text="PROJECTS" onClick={() => handleScroll("project")} />
             </motion.div>
           )}
         </AnimatePresence>

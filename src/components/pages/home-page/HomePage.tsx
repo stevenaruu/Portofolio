@@ -1,5 +1,5 @@
 import Navbar from '../../molecules/navbar/Navbar';
-import HomeLayout from '../../templates/home-layout/ProfileLayout';
+import HomeLayout from '../../templates/home-layout/HomeLayout';
 
 const HomePage = () => {
   return (
