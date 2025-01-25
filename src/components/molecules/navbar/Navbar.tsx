@@ -61,7 +61,7 @@ const Navbar = () => {
         <AnimatePresence>
           {isDropdownOpen && (
             <motion.div
-              className="md:hidden fixed top-0 right-0 h-full w-4/6 font-bold bg-zinc-800 p-4 space-y-5 z-50"
+              className="md:hidden fixed top-0 right-0 h-full w-4/6 font-bold bg-zinc-900 p-4 space-y-5 z-50"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
