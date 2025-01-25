@@ -8,7 +8,7 @@ const Cv = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = cv
-    link.download = 'STEVEN - CV.pdf';
+    link.download = 'STEVEN_CV.pdf';
     link.click();
   };
 
