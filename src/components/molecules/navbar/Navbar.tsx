@@ -11,6 +11,14 @@ const Navbar = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const handleScroll = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setIsDropdownOpen(false); // Close dropdown if in mobile view
+  };
+
   return (
     <div className="fixed top-0 left-0 right-0 z-50 shadow-md">
       <Container>
@@ -33,7 +41,7 @@ const Navbar = () => {
             exit={{ x: '-100%', opacity: 0 }}
             transition={{ type: 'spring', stiffness: 50, damping: 20 }}
           >
-            <Label text="ABOUT ME" />
+            <Label text="ABOUT ME" onClick={() => handleScroll("about-me")} />
             <Label text="EDUCATIONS" />
             <Label text="EXPERIENCES" />
             <Label text="SKILLS" />

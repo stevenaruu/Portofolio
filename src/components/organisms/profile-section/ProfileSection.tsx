@@ -1,11 +1,10 @@
-import { Meteors } from '../../atoms/meteors/Meteors'
-import Cv from '../../molecules/cv/Cv'
 import Profile from '../../molecules/profile/Profile'
-import { SocialMedia } from '../../molecules/social-media/SocialMedia'
 import TextGroup from '../../molecules/text-group/TextGroup'
+import { SocialMedia } from '../../molecules/social-media/SocialMedia'
+import Cv from '../../molecules/cv/Cv'
+import { Meteors } from '../../atoms/meteors/Meteors'
 
-const ProfileLayout = () => {
-
+const ProfileSection = () => {
   return (
     <section
       className='min-h-screen relative flex flex-col justify-center items-center overflow-hidden w-full'
@@ -19,4 +18,4 @@ const ProfileLayout = () => {
   )
 }
 
-export default ProfileLayout
+export default ProfileSection

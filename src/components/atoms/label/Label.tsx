@@ -1,6 +1,13 @@
-const Label = ({ text }: {text: string}) => {
+interface LabelProps {
+  text: string;
+  onClick?: () => void;
+}
+
+const Label = ({ text, onClick }: LabelProps) => {
   return (
-    <div className='text-white text-lg cursor-pointer'>{text}</div>
+    <div onClick={onClick} className='text-white text-lg cursor-pointer hover:text-yellow-300 transition duration-300 ease-in-out transform hover:scale-105'>
+      {text}
+    </div>
   )
 }
 
