@@ -30,7 +30,7 @@ const Navbar = () => {
             exit={{ x: '100%', opacity: 0 }}
             transition={{ type: 'spring', stiffness: 50, damping: 20 }}
           >
-            <Label text="STVN." />
+            <Label text="STVN." onClick={() => handleScroll("home")}/>
           </motion.div>
 
           {/* Desktop Menu */}
@@ -42,7 +42,7 @@ const Navbar = () => {
             transition={{ type: 'spring', stiffness: 50, damping: 20 }}
           >
             <Label text="ABOUT ME" onClick={() => handleScroll("about-me")} />
-            <Label text="EDUCATIONS" />
+            <Label text="EDUCATIONS" onClick={() => handleScroll("education")} />
             <Label text="EXPERIENCES" />
             <Label text="SKILLS" />
             <Label text="PROJECTS" />
@@ -75,8 +75,8 @@ const Navbar = () => {
               >
                 ✕
               </motion.button>
-              <Label text="ABOUT ME" />
-              <Label text="EDUCATIONS" />
+              <Label text="ABOUT ME" onClick={() => handleScroll("about-me")} />
+              <Label text="EDUCATIONS" onClick={() => handleScroll("education")} />
               <Label text="EXPERIENCES" />
               <Label text="SKILLS" />
               <Label text="PROJECTS" />

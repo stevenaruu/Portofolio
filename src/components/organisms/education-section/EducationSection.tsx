@@ -1,12 +1,9 @@
-import Container from '../../container/Container'
-import Title from '../../atoms/title/Title'
+import EducationGroup from '../../molecules/education-group/EducationGroup'
 
 const EducationSection = () => {
   return (
-    <section className='mt-20'>
-      <Container>
-        <Title text='Educations.' />
-      </Container>
+    <section id='education' className='mt-20'>
+        <EducationGroup />
     </section>
   )
 }
