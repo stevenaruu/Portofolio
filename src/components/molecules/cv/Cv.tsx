@@ -46,7 +46,7 @@ const Cv = () => {
       }}
     >
       <CoolMode>
-        <ShimmerButton>
+        <ShimmerButton className='px-7 py-2'>
           Download CV
         </ShimmerButton>
       </CoolMode>

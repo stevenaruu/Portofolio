@@ -7,6 +7,8 @@ import { CoolMode } from '../../atoms/cool-mode/CoolMode';
 
 const Profile = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [cardSize, setCardSize] = useState({ width: 200, height: 200 });
+  const [overlayContent, setOverlayContent] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -14,6 +16,26 @@ const Profile = () => {
     }, 500);
 
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setCardSize({ width: 100, height: 100 });
+        setOverlayContent(false);
+      } else if (window.innerWidth < 1024) {
+        setCardSize({ width: 150, height: 150 });
+        setOverlayContent(false);
+      } else {
+        setCardSize({ width: 200, height: 200 }); 
+        setOverlayContent(true);
+      }
+    };
+
+    handleResize(); 
+    window.addEventListener('resize', handleResize); 
+
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
@@ -37,11 +59,11 @@ const Profile = () => {
             scaleOnHover={1.2}
             showMobileWarning={false}
             showTooltip={true}
-            displayOverlayContent={true}
-            imageHeight="200px"
-            imageWidth="200px"
-            containerHeight="200px"
-            containerWidth="200px"
+            displayOverlayContent={overlayContent}
+            imageHeight={`${cardSize.height}px`}
+            imageWidth={`${cardSize.width}px`}
+            containerHeight={`${cardSize.height}px`}
+            containerWidth={`${cardSize.width}px`}
             overlayContent={
               <CoolMode>
                 <p className="ms-5 mt-5 bg-primary px-3 py-1 text-xs rounded-sm font-semibold cursor-pointer">

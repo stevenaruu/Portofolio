@@ -4,31 +4,32 @@ import DecryptedText from '../../atoms/decrypted-text/DecryptedText'
 const TextGroup = () => {
   return (
     <motion.div
-      className='flex flex-col absolute -z-10 font-bold tracking-wide text-center'
+      className="flex flex-col absolute -z-10 font-bold tracking-wide text-center"
     >
-      <div className='text-8xl'>
+      {/* Responsif dengan Tailwind */}
+      <div className="text-6xl md:text-7xl lg:text-8xl">
         <DecryptedText
           speed={50}
           maxIterations={20}
-          revealDirection='end'
+          revealDirection="end"
           animateOn="view"
           text="STEVEN"
         />
       </div>
-      <div className='text-9xl'>
+      <div className="text-7xl md:text-8xl lg:text-9xl">
         <DecryptedText
           speed={50}
           maxIterations={30}
-          revealDirection='center'
+          revealDirection="center"
           animateOn="view"
           text="STEVEN"
         />
       </div>
-      <div className='text-8xl'>
+      <div className="text-6xl md:text-7xl lg:text-8xl">
         <DecryptedText
           speed={50}
           maxIterations={20}
-          revealDirection='start'
+          revealDirection="start"
           animateOn="view"
           text="STEVEN"
         />

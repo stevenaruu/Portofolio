@@ -1,6 +1,7 @@
 import { Meteors } from '../../atoms/meteors/Meteors'
 import Cv from '../../molecules/cv/Cv'
 import Profile from '../../molecules/profile/Profile'
+import { SocialMedia } from '../../molecules/social-media/SocialMedia'
 import TextGroup from '../../molecules/text-group/TextGroup'
 
 const ProfileLayout = () => {
@@ -11,6 +12,7 @@ const ProfileLayout = () => {
     >
       <Profile />
       <TextGroup />
+      <SocialMedia />
       <Cv />
       <Meteors number={30} />
     </section>
