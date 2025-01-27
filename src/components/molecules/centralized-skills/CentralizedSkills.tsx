@@ -32,7 +32,7 @@ const Circle = forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex size-16 items-center justify-center",
+        "z-10 flex size-8 md:size-16 items-center justify-center overflow-hidden",
         className,
       )}
     >
@@ -111,14 +111,14 @@ export function CentralizedSkills() {
             </div>
           </div>
           <div className="flex flex-row items-center justify-between">
-            <Circle className="ms-10" ref={div5Ref}>
+            <Circle className="md:ms-10" ref={div5Ref}>
               <img src={dotnet} className="h-full w-full" alt="" />
             </Circle>
-            <div className="relative bg-background overflow-hidden flex justify-center items-center rounded-md px-16 py-5 font-extrabold text-3xl tracking-widest bg-zinc-900 z-10" ref={div10Ref}>
+            <div className="relative bg-background overflow-hidden flex justify-center items-center rounded-md py-2 px-4 md:px-16 md:py-5 font-extrabold text-lg md:text-3xl tracking-widest bg-zinc-900 z-10" ref={div10Ref}>
               Skills
               <BorderBeam borderWidth={2} size={70} duration={3} delay={9} />
             </div>
-            <Circle className="me-10" ref={div15Ref}>
+            <Circle className="md:me-10" ref={div15Ref}>
               <img src={laravel} className="h-full w-full" alt="" />
             </Circle>
           </div>
