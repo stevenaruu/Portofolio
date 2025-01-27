@@ -6,7 +6,7 @@ interface SplashScreenState {
 }
 
 const initialState: SplashScreenState = {
-    splashScreen: true,
+    splashScreen: false,
 };
 
 export const SplashScreenSlice = createSlice({

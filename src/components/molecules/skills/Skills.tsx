@@ -10,8 +10,7 @@ const Skills = () => {
         <img className='w-full lg:w-auto' src="https://github-readme-stats.vercel.app/api/top-langs/?username=stevenaruu&layout=compact&langs_count=20&theme=dark" />
         <img className='w-full lg:w-auto' src="https://github-readme-stats.vercel.app/api?username=stevenaruu&rank_icon=github&theme=dark" />
         <GitHubCalendar blockSize={12} colorScheme='dark' username='stevenaruu' />
-      </div>
-
+      </div>  
     </Container>
   );
 };

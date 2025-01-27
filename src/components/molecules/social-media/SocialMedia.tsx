@@ -1,9 +1,9 @@
-import { ShimmerButton } from '../../atoms/shimmer-button/ShimmerButton'
 import github from '../../../assets/icon/github.svg'
 import linkedin from '../../../assets/icon/linkedin.svg'
 import email from '../../../assets/icon/email.svg'
 import instagram from '../../../assets/icon/instagram.svg'
 import { motion } from 'framer-motion';
+import { BorderBeam } from '../../atoms/border-beam/BorderBeam'
 
 export const SocialMedia = () => {
 
@@ -19,18 +19,22 @@ export const SocialMedia = () => {
       exit={{ x: '-100%', opacity: 0 }}
       transition={{ type: 'spring', stiffness: 50, damping: 20 }}
     >
-      <ShimmerButton onClick={() => openInNewTab('https://github.com/stevenaruu')} className='px-3 py-3' borderRadius='calc(infinity * 1px)'>
+      <div onClick={() => openInNewTab('https://github.com/stevenaruu')} className='px-3 py-3 rounded-full relative cursor-pointer'>
         <img className='size-7' src={github} alt="" />
-      </ShimmerButton>
-      <ShimmerButton onClick={() => openInNewTab('https://www.linkedin.com/in/stevenaruu/')} className='px-3 py-3' borderRadius='calc(infinity * 1px)'>
+        <BorderBeam borderWidth={2} size={30} duration={3} delay={9} />
+      </div>
+      <div onClick={() => openInNewTab('https://www.linkedin.com/in/stevenaruu/')} className='px-3 py-3 rounded-full relative cursor-pointer'>
         <img className='size-7' src={linkedin} alt="" />
-      </ShimmerButton>
-      <ShimmerButton onClick={() => openInNewTab('mailto:stvnhd164@gmail.com')} className='px-3 py-3' borderRadius='calc(infinity * 1px)'>
+        <BorderBeam borderWidth={2} size={30} duration={3} delay={9} />
+      </div>
+      <div onClick={() => openInNewTab('mailto:stvnhd164@gmail.com')} className='px-3 py-3 rounded-full relative cursor-pointer'>
         <img className='size-7' src={email} alt="" />
-      </ShimmerButton>
-      <ShimmerButton onClick={() => openInNewTab('https://www.instagram.com/stvnism/')} className='px-3 py-3' borderRadius='calc(infinity * 1px)'>
+        <BorderBeam borderWidth={2} size={30} duration={3} delay={9} />
+      </div>
+      <div onClick={() => openInNewTab('https://www.instagram.com/stvnism/')} className='px-3 py-3 rounded-full relative cursor-pointer'>
         <img className='size-7' src={instagram} alt="" />
-      </ShimmerButton>
+        <BorderBeam borderWidth={2} size={30} duration={3} delay={9} />
+      </div>
     </motion.div>
   )
 }
