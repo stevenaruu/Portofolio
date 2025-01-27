@@ -4,13 +4,9 @@ import email from '../../../assets/icon/email.svg'
 import instagram from '../../../assets/icon/instagram.svg'
 import { motion } from 'framer-motion';
 import { BorderBeam } from '../../atoms/border-beam/BorderBeam'
+import { openInNewTab } from '../../../lib/utils';
 
 export const SocialMedia = () => {
-
-  const openInNewTab = (url: string) => {
-    window.open(url, '_blank', 'noreferrer');
-  };
-
   return (
     <motion.div
       className='absolute flex md:flex-col bottom-48 gap-5 md:bottom-auto md:right-0 px-8 sm:px-10 lg:px-12'
