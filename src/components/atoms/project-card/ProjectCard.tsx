@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { BorderBeam } from '../border-beam/BorderBeam'
 import { openInNewTab } from '../../../lib/utils'
 
