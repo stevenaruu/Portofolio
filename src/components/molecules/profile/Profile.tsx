@@ -42,7 +42,7 @@ const Profile = () => {
     isVisible && (
       <motion.div
         initial={{ scale: 0.8, y: 30 }}
-        animate={{ scale: 1, y: 0 }}
+        whileInView={{ scale: 1, y: 0 }}
         transition={{
           type: 'spring',
           stiffness: 150,
