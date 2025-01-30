@@ -32,7 +32,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
-    "@swc/core": "^1.10.9",
     "@types/node": "^22.10.10",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
@@ -52,7 +51,6 @@
     "vite": "^6.0.11"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.6.1",
-    "@esbuild/linux-x64":"0.24.0"
+    "@esbuild/linux-x64": "0.24.0"
   }
 }
