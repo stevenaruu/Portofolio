@@ -1,8 +1,8 @@
 import Profile from '../../molecules/profile/Profile'
 import TextGroup from '../../molecules/text-group/TextGroup'
 import { SocialMedia } from '../../molecules/social-media/SocialMedia'
-import Cv from '../../molecules/cv/Cv'
 import { Meteors } from '../../atoms/meteors/Meteors'
+import Document from '../../molecules/document/Document'
 
 const ProfileSection = () => {
   return (
@@ -13,7 +13,7 @@ const ProfileSection = () => {
       <Profile />
       <TextGroup />
       <SocialMedia />
-      <Cv />
+      <Document />
       <Meteors number={30} />
     </section>
   )
