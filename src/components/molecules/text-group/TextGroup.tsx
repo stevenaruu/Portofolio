@@ -16,7 +16,7 @@ const TextGroup = () => {
           text="STEVEN"
         />
       </div>
-      <div className="text-yellow-300 text-7xl md:text-8xl lg:text-9xl">
+      <div className="text-secondary text-7xl md:text-8xl lg:text-9xl">
         <DecryptedText
           speed={50}
           maxIterations={30}

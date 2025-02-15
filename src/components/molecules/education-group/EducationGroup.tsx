@@ -13,13 +13,13 @@ const EducationGroup = () => {
           <h2>SMAN</h2>
           <p>1 Jonggol</p>
           <p className='text-lg'>High School Diploma (MIPA)</p>
-          <p className='text-lg'>Score <span className='font-bold text-yellow-300'>87.07</span> of <span className='font-bold text-yellow-300'>100</span></p>
+          <p className='text-lg'>Score <span className='font-bold text-secondary'>87.07</span> of <span className='font-bold text-secondary'>100</span></p>
         </DecayCard>
         <DecayCard width={400} height={500} image={binus} tag='2022-2026'>
           <h2>BINUS</h2>
           <p>University</p>
           <p className='text-lg'>Computer Science</p>
-          <p className='text-lg'>GPA <span className='font-bold text-yellow-300'>3.74</span> of <span className='font-bold text-yellow-300'>4.00</span></p>
+          <p className='text-lg'>GPA <span className='font-bold text-secondary'>3.74</span> of <span className='font-bold text-secondary'>4.00</span></p>
         </DecayCard>
       </div>
     </Container>

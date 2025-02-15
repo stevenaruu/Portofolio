@@ -8,7 +8,8 @@ export default {
   theme: {
   	extend: {
   		colors: {
-  			primary: '#060606'
+  			primary: '#060606',
+				secondary: '#7dd3fc'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
