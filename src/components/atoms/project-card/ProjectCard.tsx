@@ -1,8 +1,9 @@
 import { ReactNode } from 'react'
 import { BorderBeam } from '../border-beam/BorderBeam'
 import { openInNewTab } from '../../../lib/utils'
+import Github from '../../../assets/icon/github'
 
-const ProjectCard = ({ children, title, description, image, link, mobile, dekstop }: { children: ReactNode, title: string, description: string, image: string, link: string, mobile: string, dekstop: string }) => {
+const ProjectCard = ({ children, title, description, link, mobile, dekstop }: { children: ReactNode, title: string, description: string, link: string, mobile: string, dekstop: string }) => {
   return (
     <div className='mx-auto flex relative flex-col md:flex-row w-[96%] bg-zinc-900 h-full md:h-96 mt-10 rounded-lg'>
       <div className='w-full md:w-1/2 p-5 h-full'>
@@ -12,7 +13,7 @@ const ProjectCard = ({ children, title, description, image, link, mobile, deksto
           {children}
         </div>
         <div onClick={() => openInNewTab(link)} className='mt-5 px-4 rounded-full w-fit flex items-center justify-center gap-1 py-1 bg-zinc-800 cursor-pointer'>
-          <img className='size-10' src={image} alt="" />
+          <Github height={40} width={40} />
           <p>View More</p>
         </div>
       </div>

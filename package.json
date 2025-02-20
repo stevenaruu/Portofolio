@@ -29,6 +29,7 @@
     "react-router-dom": "^6.28.2",
     "react-vertical-timeline-component": "^3.5.3",
     "redux-persist": "^6.0.0",
+    "styled-components": "^6.1.15",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7"
   },

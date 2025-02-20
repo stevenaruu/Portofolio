@@ -1,10 +1,10 @@
-import github from '../../../assets/icon/github.svg'
 import linkedin from '../../../assets/icon/linkedin.svg'
-import email from '../../../assets/icon/email.svg'
 import instagram from '../../../assets/icon/instagram.svg'
 import { motion } from 'framer-motion';
 import { BorderBeam } from '../../atoms/border-beam/BorderBeam'
 import { openInNewTab } from '../../../lib/utils';
+import Email from '../../../assets/icon/email';
+import Github from '../../../assets/icon/github';
 
 export const SocialMedia = () => {
   return (
@@ -16,7 +16,7 @@ export const SocialMedia = () => {
       transition={{ type: 'spring', stiffness: 50, damping: 20 }}
     >
       <div onClick={() => openInNewTab('https://github.com/stevenaruu')} className='px-3 py-3 rounded-full relative cursor-pointer'>
-        <img className='size-7' src={github} alt="" />
+        <Github height={28} width={28} />
         <BorderBeam borderWidth={2} size={30} duration={3} delay={9} />
       </div>
       <div onClick={() => openInNewTab('https://www.linkedin.com/in/stevenaruu/')} className='px-3 py-3 rounded-full relative cursor-pointer'>
@@ -24,7 +24,7 @@ export const SocialMedia = () => {
         <BorderBeam borderWidth={2} size={30} duration={3} delay={9} />
       </div>
       <div onClick={() => openInNewTab('mailto:stvnhd164@gmail.com')} className='px-3 py-3 rounded-full relative cursor-pointer'>
-        <img className='size-7' src={email} alt="" />
+        <Email height={24} width={24} />
         <BorderBeam borderWidth={2} size={30} duration={3} delay={9} />
       </div>
       <div onClick={() => openInNewTab('https://www.instagram.com/stvnism/')} className='px-3 py-3 rounded-full relative cursor-pointer'>

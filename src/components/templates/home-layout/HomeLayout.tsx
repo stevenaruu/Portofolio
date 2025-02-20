@@ -1,4 +1,5 @@
 import AboutSection from "../../organisms/about-section/AboutSection"
+import ContactSection from "../../organisms/contact-section/ContactSection"
 import EducationSection from "../../organisms/education-section/EducationSection"
 import ExperienceSection from "../../organisms/experience-section/ExperienceSection"
 import ProfileSection from "../../organisms/profile-section/ProfileSection"
@@ -14,6 +15,7 @@ const HomeLayout = () => {
       <ExperienceSection />
       <SkillSection />
       <ProjectSection />
+      <ContactSection />
     </>
   )
 }
