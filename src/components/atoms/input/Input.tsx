@@ -1,11 +1,7 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 
-const Input = ({ label, onChange }: { label: string, onChange?: (value: string) => void; }) => {
-  const [value, setValue] = useState('');
-
+const Input = ({ label, value, onChange }: { label: string; value: string; onChange?: (value: string) => void }) => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
     if (onChange) {
       onChange(event.target.value);
     }
