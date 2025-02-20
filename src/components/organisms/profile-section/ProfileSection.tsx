@@ -8,7 +8,7 @@ const ProfileSection = () => {
   return (
     <section
       id='home'
-      className='min-h-screen relative flex flex-col justify-center items-center overflow-hidden w-full'
+      className='min-h-svh md:min-h-screen relative flex flex-col justify-center items-center overflow-hidden w-full'
     >
       <Profile />
       <TextGroup />
