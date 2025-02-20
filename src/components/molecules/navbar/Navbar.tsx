@@ -46,6 +46,7 @@ const Navbar = () => {
             <Label text="EXPERIENCES" onClick={() => handleScroll("experience")} />
             <Label text="SKILLS" onClick={() => handleScroll("skill")} />
             <Label text="PROJECTS" onClick={() => handleScroll("project")} />
+            <Label text="CONTACT" onClick={() => handleScroll("contact")} />
           </motion.div>
 
           {/* Mobile Menu Button */}
@@ -80,6 +81,7 @@ const Navbar = () => {
               <Label text="EXPERIENCES" onClick={() => handleScroll("experience")} />
               <Label text="SKILLS" onClick={() => handleScroll("skill")} />
               <Label text="PROJECTS" onClick={() => handleScroll("project")} />
+              <Label text="CONTACT" onClick={() => handleScroll("contact")} />
             </motion.div>
           )}
         </AnimatePresence>

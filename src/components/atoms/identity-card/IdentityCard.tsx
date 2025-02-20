@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import profile from '../../../assets/images/profile.jpg'
 import Github from '../../../assets/icon/github';
+import LinkedIn from '../../../assets/icon/linkedin';
+import Email from '../../../assets/icon/email';
+import Instagram from '../../../assets/icon/instagram';
+import { openInNewTab } from '../../../lib/utils';
 
 const IdentityCard = () => {
   return (
@@ -13,17 +17,17 @@ const IdentityCard = () => {
           </button>
           <p className='text-[#000] text-center text-xl'>SOFTWARE ENGINEER</p>
           <div className='flex gap-4 justify-center items-center'>
-            <button className="input__button__shadow p-1">
+            <button onClick={() => openInNewTab('https://github.com/stevenaruu')} className="input__button__shadow p-1">
               <Github height={25} width={25} fill='#000' />
             </button>
-            <button className="input__button__shadow p-1">
-              <Github height={25} width={25} />
+            <button onClick={() => openInNewTab('https://www.linkedin.com/in/stevenaruu/')} className="input__button__shadow p-1">
+              <LinkedIn height={25} width={25} fill='#000' />
             </button>
-            <button className="input__button__shadow p-1">
-              <Github height={25} width={25} />
+            <button onClick={() => openInNewTab('mailto:stvnhd164@gmail.com')} className="input__button__shadow p-1">
+              <Email height={25} width={25} fill='#000' />
             </button>
-            <button className="input__button__shadow p-1">
-              <Github height={25} width={25} />
+            <button onClick={() => openInNewTab('https://www.instagram.com/stvnism/')} className="input__button__shadow p-1">
+              <Instagram height={25} width={25} fill='#000' />
             </button>
           </div>
         </div>
@@ -82,7 +86,7 @@ const StyledWrapper = styled.div`
     align-items: center;
     transform: translateZ(20px);
     position: relative;
-    z-index: 3;
+    z-index: 20;
     font-weight: bold;
     text-transform: uppercase;
   }

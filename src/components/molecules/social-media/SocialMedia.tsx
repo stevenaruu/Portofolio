@@ -1,10 +1,10 @@
-import linkedin from '../../../assets/icon/linkedin.svg'
-import instagram from '../../../assets/icon/instagram.svg'
 import { motion } from 'framer-motion';
 import { BorderBeam } from '../../atoms/border-beam/BorderBeam'
 import { openInNewTab } from '../../../lib/utils';
 import Email from '../../../assets/icon/email';
 import Github from '../../../assets/icon/github';
+import LinkedIn from '../../../assets/icon/linkedin';
+import Instagram from '../../../assets/icon/instagram';
 
 export const SocialMedia = () => {
   return (
@@ -20,7 +20,7 @@ export const SocialMedia = () => {
         <BorderBeam borderWidth={2} size={30} duration={3} delay={9} />
       </div>
       <div onClick={() => openInNewTab('https://www.linkedin.com/in/stevenaruu/')} className='px-3 py-3 rounded-full relative cursor-pointer'>
-        <img className='size-7' src={linkedin} alt="" />
+        <LinkedIn height={28} width={28} />
         <BorderBeam borderWidth={2} size={30} duration={3} delay={9} />
       </div>
       <div onClick={() => openInNewTab('mailto:stvnhd164@gmail.com')} className='px-3 py-3 rounded-full relative cursor-pointer'>
@@ -28,7 +28,7 @@ export const SocialMedia = () => {
         <BorderBeam borderWidth={2} size={30} duration={3} delay={9} />
       </div>
       <div onClick={() => openInNewTab('https://www.instagram.com/stvnism/')} className='px-3 py-3 rounded-full relative cursor-pointer'>
-        <img className='size-7' src={instagram} alt="" />
+        <Instagram height={28} width={28} />
         <BorderBeam borderWidth={2} size={30} duration={3} delay={9} />
       </div>
     </motion.div>
