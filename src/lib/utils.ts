@@ -13,13 +13,12 @@ export const openInNewTab = (url: string) => {
 export const downloadFile = async (
   file: string,
   name: string,
-  deviceInfo: { type: string; model: string; os: string },
+  deviceInfo: { manufacturer: string; model: string; os: string, osVersion: string, platform: string, webViewVersion: string },
   location: { ip: string; city: string; region: string; country: string; isp: string }
 ) => {
   try {
 
     ReactGA.event("Download " + name, {
-      type: deviceInfo.type,
       model: deviceInfo.model,
       os: deviceInfo.os,
       ip: location.ip,

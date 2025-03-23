@@ -8,10 +8,10 @@ const TRACKING_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_TRACKING_ID;
 
 const InitializeGA4 = () => {
   ReactGA.initialize(TRACKING_ID);
-  const { type, model, os } = useDeviceInfo();
 
   const dispatch = useDispatch();
   const location = useSelector(selectLocation);
+  const deviceInfo = useDeviceInfo();
 
   useEffect(() => {
     const fetchLocation = async () => {
@@ -30,9 +30,12 @@ const InitializeGA4 = () => {
         dispatch(SET_LOCATION(locationData));
 
         ReactGA.set({
-          type: type,
-          model: model,
-          os: os,
+          manufacturer: deviceInfo.manufacturer,
+          model: deviceInfo.model,
+          os: deviceInfo.os,
+          osVersion: deviceInfo.osVersion,
+          platform: deviceInfo.platform,
+          webViewVersion: deviceInfo.webViewVersion,
           ip: locationData.ip,
           city: locationData.city,
           region: locationData.region,
@@ -41,9 +44,12 @@ const InitializeGA4 = () => {
         })
 
         ReactGA.event("User Data", {
-          type: type,
-          model: model,
-          os: os,
+          manufacturer: deviceInfo.manufacturer,
+          model: deviceInfo.model,
+          os: deviceInfo.os,
+          osVersion: deviceInfo.osVersion,
+          platform: deviceInfo.platform,
+          webViewVersion: deviceInfo.webViewVersion,
           ip: locationData.ip,
           city: locationData.city,
           region: locationData.region,

@@ -1,39 +1,33 @@
 import { useState, useEffect } from "react";
-import MobileDetect from "mobile-detect";
+import { Device } from '@capacitor/device';
 
 const useDeviceInfo = () => {
   const [deviceInfo, setDeviceInfo] = useState({
-    type: "Unknown",
+    manufacturer: "Unknown",
     model: "Unknown",
     os: "Unknown",
+    osVersion: "Unknown",
+    platform: "Unknown",
+    webViewVersion: "Unknown",
   });
 
   useEffect(() => {
-    const md = new MobileDetect(window.navigator.userAgent);
-    const isMobile = md.mobile() !== null;
-    const isTablet = md.tablet() !== null;
-    const os = md.os() || "Unknown OS";
-
-    let deviceType = "Desktop";
-    if (isMobile) {
-      deviceType = "Mobile";
-    } else if (isTablet) {
-      deviceType = "Tablet";
-    } else {
-
-      const screenWidth = window.screen.width;
-      if (screenWidth >= 1280 && screenWidth <= 1920) {
-        deviceType = "Laptop";
-      } else if (screenWidth > 1920) {
-        deviceType = "Desktop";
+    const getDeviceInfo = async () => {
+      try {
+        const info = await Device.getInfo();
+        setDeviceInfo({
+          manufacturer: info.manufacturer || "Unknown",
+          model: info.model || "Unknown",
+          os: info.operatingSystem || "Unknown",
+          osVersion: info.osVersion || "Unknown",
+          platform: info.platform || "Unknown",
+          webViewVersion: info.webViewVersion || "Unknown",
+        });
+      } catch (error) {
+        console.error("Error fetching device info:", error);
       }
-    }
-
-    setDeviceInfo({
-      type: deviceType,
-      model: md.mobile() || "Unknown Model",
-      os: os,
-    });
+    };
+    getDeviceInfo();
   }, []);
 
   return deviceInfo;
