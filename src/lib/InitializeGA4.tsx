@@ -11,7 +11,7 @@ const InitializeGA4 = () => {
 
   const dispatch = useDispatch();
   const location = useSelector(selectLocation);
-  const deviceInfo = useDeviceInfo();
+  const { deviceInfo, loading } = useDeviceInfo(); // Use loading state
 
   useEffect(() => {
     const fetchLocation = async () => {
@@ -29,33 +29,35 @@ const InitializeGA4 = () => {
 
         dispatch(SET_LOCATION(locationData));
 
-        ReactGA.set({
-          manufacturer: deviceInfo.manufacturer,
-          model: deviceInfo.model,
-          os: deviceInfo.os,
-          osVersion: deviceInfo.osVersion,
-          platform: deviceInfo.platform,
-          webViewVersion: deviceInfo.webViewVersion,
-          ip: locationData.ip,
-          city: locationData.city,
-          region: locationData.region,
-          country: locationData.country,
-          isp: locationData.isp,
-        })
+        if (!loading) {
+          ReactGA.set({
+            manufacturer: deviceInfo.manufacturer,
+            model: deviceInfo.model,
+            os: deviceInfo.os,
+            osVersion: deviceInfo.osVersion,
+            platform: deviceInfo.platform,
+            webViewVersion: deviceInfo.webViewVersion,
+            ip: locationData.ip,
+            city: locationData.city,
+            region: locationData.region,
+            country: locationData.country,
+            isp: locationData.isp,
+          });
 
-        ReactGA.event("User Data", {
-          manufacturer: deviceInfo.manufacturer,
-          model: deviceInfo.model,
-          os: deviceInfo.os,
-          osVersion: deviceInfo.osVersion,
-          platform: deviceInfo.platform,
-          webViewVersion: deviceInfo.webViewVersion,
-          ip: locationData.ip,
-          city: locationData.city,
-          region: locationData.region,
-          country: locationData.country,
-          isp: locationData.isp,
-        });
+          ReactGA.event("User Data", {
+            manufacturer: deviceInfo.manufacturer,
+            model: deviceInfo.model,
+            os: deviceInfo.os,
+            osVersion: deviceInfo.osVersion,
+            platform: deviceInfo.platform,
+            webViewVersion: deviceInfo.webViewVersion,
+            ip: locationData.ip,
+            city: locationData.city,
+            region: locationData.region,
+            country: locationData.country,
+            isp: locationData.isp,
+          });
+        }
 
       } catch (error) {
         console.error("Failed to fetch location:", error);

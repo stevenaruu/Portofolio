@@ -11,7 +11,7 @@ import { selectLocation } from '../../../store/location/LocationSlice';
 import { useSelector } from 'react-redux';
 
 const Document = () => {
-  const deviceInfo = useDeviceInfo();
+  const { deviceInfo } = useDeviceInfo();
   const location = useSelector(selectLocation);
 
   const [isVisible, setIsVisible] = useState(false);

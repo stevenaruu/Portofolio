@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Device } from '@capacitor/device';
+import { Device } from "@capacitor/device";
 
 const useDeviceInfo = () => {
   const [deviceInfo, setDeviceInfo] = useState({
@@ -10,6 +10,7 @@ const useDeviceInfo = () => {
     platform: "Unknown",
     webViewVersion: "Unknown",
   });
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getDeviceInfo = async () => {
@@ -25,12 +26,15 @@ const useDeviceInfo = () => {
         });
       } catch (error) {
         console.error("Error fetching device info:", error);
+      } finally {
+        setLoading(false);
       }
     };
+
     getDeviceInfo();
   }, []);
 
-  return deviceInfo;
+  return { deviceInfo, loading };
 };
 
 export default useDeviceInfo;
