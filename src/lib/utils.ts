@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
+import ReactGA from "react-ga4";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -9,8 +10,23 @@ export const openInNewTab = (url: string) => {
   window.open(url, '_blank', 'noreferrer');
 };
 
-export const downloadFile = async (file: string, name: string) => {
+export const downloadFile = async (
+  file: string,
+  name: string,
+  deviceInfo: { type: string; model: string; os: string },
+  location: { ip: string; city: string; region: string; country: string; isp: string }
+) => {
   try {
+
+    ReactGA.event("Download " + name, {
+      type: deviceInfo.type,
+      model: deviceInfo.model,
+      os: deviceInfo.os,
+      ip: location.ip,
+      city: location.city,
+      region: location.region,
+    });
+
     const response = await fetch(file);
     const blob = await response.blob();
     const url = URL.createObjectURL(blob);
@@ -22,6 +38,7 @@ export const downloadFile = async (file: string, name: string) => {
 
     URL.revokeObjectURL(url);
   } catch (error) {
-    console.error('Error downloading CV:', error);
+    console.error('Error downloading file:', error);
   }
-}
+};
+

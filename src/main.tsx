@@ -5,12 +5,14 @@ import App from './App.tsx'
 import { Provider } from 'react-redux'
 import { store } from './store.ts'
 import { Analytics } from '@vercel/analytics/react';
+import InitializeGA4 from './lib/InitializeGA4.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
       <App />
       <Analytics />
+      <InitializeGA4 />
     </Provider>
   </StrictMode>,
 )

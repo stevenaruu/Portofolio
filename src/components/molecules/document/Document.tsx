@@ -6,8 +6,14 @@ import { downloadFile } from '../../../lib/utils';
 
 import cv from '../../../assets/document/CV.pdf'
 import portfolio from '../../../assets/document/PORTFOLIO.pdf'
+import useDeviceInfo from '../../../hooks/useDeviceInfo';
+import { selectLocation } from '../../../store/location/LocationSlice';
+import { useSelector } from 'react-redux';
 
 const Document = () => {
+  const deviceInfo = useDeviceInfo();
+  const location = useSelector(selectLocation);
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -31,12 +37,12 @@ const Document = () => {
       }}
     >
       <CoolMode>
-        <ShimmerButton onClick={() => downloadFile(portfolio, 'STEVEN_PORTFOLIO.pdf')} className='px-7 py-2'>
+        <ShimmerButton onClick={() => downloadFile(portfolio, 'STEVEN_PORTFOLIO.pdf', deviceInfo, location)} className='px-7 py-2'>
           Portfolio
         </ShimmerButton>
       </CoolMode>
       <CoolMode>
-        <ShimmerButton onClick={() => downloadFile(cv, 'STEVEN_CV.pdf')} className='px-7 py-2'>
+        <ShimmerButton onClick={() => downloadFile(cv, 'STEVEN_CV.pdf', deviceInfo, location)} className='px-7 py-2'>
           CV
         </ShimmerButton>
       </CoolMode>

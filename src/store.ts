@@ -3,9 +3,11 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useSelector } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { SplashScreenSlice } from './store/splash-screen/SplashScreenSlice';
+import { LocationSlice } from './store/location/LocationSlice';
 
 const rootReducer = combineReducers({
-    splashScreen: SplashScreenSlice.reducer
+    splashScreen: SplashScreenSlice.reducer,
+    location: LocationSlice.reducer
 });
 
 // const persistedReducer = persistReducer(
