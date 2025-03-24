@@ -1,6 +1,7 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 import ReactGA from "react-ga4";
+import { Device } from "@capacitor/device";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -13,14 +14,14 @@ export const openInNewTab = (url: string) => {
 export const downloadFile = async (
   file: string,
   name: string,
-  deviceInfo: { manufacturer: string; model: string; os: string, osVersion: string, platform: string, webViewVersion: string },
   location: { ip: string; city: string; region: string; country: string; isp: string }
 ) => {
   try {
-
+    const deviceInfo = await Device.getInfo();
+    
     ReactGA.event("Download " + name, {
       model: deviceInfo.model,
-      os: deviceInfo.os,
+      os: deviceInfo.operatingSystem,
       ip: location.ip,
       city: location.city,
       region: location.region,
