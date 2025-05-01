@@ -14,7 +14,21 @@ const ExperienceTimeline = () => {
           className="vertical-timeline-element--work"
           contentStyle={{ background: '#ffffff', color: '#ffffff' }}
           contentArrowStyle={{ borderRight: '7px solid #ffffff' }}
-          date="March 2024 - Preset"
+          date="May 2025 - Present"
+          iconStyle={{ background: '#ffffff', color: '#ffffff' }}
+          icon={<Icon source={itDivision} />}
+        >
+          <h2 className="vertical-timeline-element-title font-bold">Programmer</h2>
+          <h4 className="vertical-timeline-element-subtitle text-primary">West Jakarta, Indonesia</h4>
+          <p className='text-primary'>
+            Assist in maintaining apps related to BINUSMAYA My Dashboard (Super-Application) and BINUSMAYA Learning Management System (Sub-Application)
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: '#ffffff', color: '#ffffff' }}
+          contentArrowStyle={{ borderRight: '7px solid #ffffff' }}
+          date="March 2024 - April 2025"
           iconStyle={{ background: '#ffffff', color: '#ffffff' }}
 
           icon={<Icon source={itDivision} />}
