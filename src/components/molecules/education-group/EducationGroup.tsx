@@ -19,7 +19,7 @@ const EducationGroup = () => {
           <h2>BINUS</h2>
           <p>University</p>
           <p className='text-lg'>Computer Science</p>
-          <p className='text-lg'>GPA <span className='font-bold text-secondary'>3.74</span> of <span className='font-bold text-secondary'>4.00</span></p>
+          <p className='text-lg'>GPA <span className='font-bold text-secondary'>3.78</span> of <span className='font-bold text-secondary'>4.00</span></p>
         </DecayCard>
       </div>
     </Container>
